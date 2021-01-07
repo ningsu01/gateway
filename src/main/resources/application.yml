@@ -1,0 +1,12 @@
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.99.212.118:8848
+        namespace: 18ac0647-e9d9-45b0-a3f3-4f7b25282683
+    loadbalancer:
+      retry:
+        enabled: true
+server:
+  port: 8086

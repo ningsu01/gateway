@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: my-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 47.99.212.118:8848
+        namespace: 18ac0647-e9d9-45b0-a3f3-4f7b25282683
+        name: gateway-routes
+        group: DEFAULT_GROUP
+    sentinel:
+      eager: true    # 服务启动直接建立心跳连接
+      datasource:
+        ds:
+          nacos:
+            server-addr: 47.99.212.118:8848
+            dataId: gateway.json
+            groupId: DEFAULT_GROUP
+            rule-type: flow
+      transport:
+        port: 8088
+        dashboard: 47.99.212.118:8089
